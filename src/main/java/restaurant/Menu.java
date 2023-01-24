@@ -43,7 +43,30 @@ public class Menu {
     }
 
     public void clearMenu() {
-        menu.clear();
+        this.menu.clear();
     }
 
+    public void printSingleItem(String itemName) {
+        for (MenuItem item : this.menu) {
+            if (item.getName().contains(itemName)) {
+                System.out.println(item);
+                return;
+            }
+        }
+    }
+
+    @Override
+    public String toString() {
+
+        final StringBuilder sb = new StringBuilder();
+
+        sb.append("~~Menu~~\n");
+        sb.append("Last updated: " + this.lastUpdated + "\n\n");
+
+        for (MenuItem item : this.menu) {
+            sb.append("\n\n-------------------------------\n\n" + item);
+        }
+
+        return sb.toString();
+    }
 }

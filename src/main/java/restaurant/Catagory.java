@@ -5,7 +5,9 @@ public enum Catagory {
     SALAD,
     SOUP,
     SANDWICH,
-    DINNER,
+    BREAKFAST,
     LUNCH,
+    DINNER,
     DRINK,
+    DESSERT,
 }
